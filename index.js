@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
   console.log("Welcome home !");
 });
 
+app.post("/login", (req, res) => {
+  res.send("Endpoint login is ready");
+});
+
 app.listen(port, (error) => {
   if (error) return console.error("Api failed to start", error);
   console.log(`API is running at ${port}`);
