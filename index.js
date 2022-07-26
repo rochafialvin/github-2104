@@ -16,8 +16,8 @@ app.post("/login", auth, (req, res) => {
 });
 
 app.post("/forgot-password", auth, (req, res) => {
-  validation();
-  res.send("Register berhasil");
+  console.log("Process forgeting password");
+  res.send("Forgot password berhasil");
 });
 
 app.listen(port, (error) => {
