@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 app.post("/login", auth, (req, res) => {
   validation();
-  res.send("Endpoint login is ready");
+  res.send("Login berhasil");
 });
 
 app.listen(port, (error) => {
