@@ -15,6 +15,11 @@ app.post("/login", auth, (req, res) => {
   res.send("Login berhasil");
 });
 
+app.post("/register", auth, (req, res) => {
+  validation();
+  res.send("Register berhasil");
+});
+
 app.listen(port, (error) => {
   if (error) return console.error("Api failed to start", error);
   console.log(`API is running at ${port}`);
