@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const validation = require("./helpers/validation");
 
 app.get("/", (req, res) => {
   res.send("Welcome home !");
@@ -9,6 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
+  validation();
   res.send("Endpoint login is ready");
 });
 
