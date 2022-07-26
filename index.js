@@ -15,6 +15,11 @@ app.post("/login", auth, (req, res) => {
   res.send("Login berhasil");
 });
 
+app.post("/register", auth, (req, res) => {
+  validation();
+  res.send("Register berhasil");
+});
+
 app.post("/forgot-password", auth, (req, res) => {
   console.log("Process forgeting password");
   res.send("Forgot password berhasil");
